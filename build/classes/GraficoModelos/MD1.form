@@ -53,17 +53,17 @@
                       <Component id="jLabel5" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabelMu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldMu" pref="64" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldMu" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel7" min="-2" pref="77" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jTextFieldP" max="32767" attributes="0"/>
                               </Group>
@@ -72,6 +72,7 @@
                           <Component id="jButtonCalcular" min="-2" pref="138" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Component id="jLabelDelta" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                           <Component id="jTextFieldDelta" min="-2" pref="67" max="-2" attributes="0"/>
@@ -94,8 +95,8 @@
                                       <Component id="jTextFieldValorWq" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="jLabelValorW" min="-2" pref="124" max="-2" attributes="0"/>
                               <Component id="jTextFieldValorW" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                              <Component id="jLabelValorW" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
