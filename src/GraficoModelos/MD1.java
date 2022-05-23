@@ -19,11 +19,8 @@ public class MD1 extends javax.swing.JFrame {
     public MD1() {
         initComponents();
     }
-    
-    private java.text.DecimalFormat formato =new java.text.DecimalFormat("0.00"); 
-   
-     
-    
+
+    private java.text.DecimalFormat formato = new java.text.DecimalFormat("0.00");
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -57,6 +54,7 @@ public class MD1 extends javax.swing.JFrame {
         jLabelValorW = new javax.swing.JLabel();
         jTextFieldValorW = new javax.swing.JTextField();
         jTextFieldValorWq = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -144,6 +142,13 @@ public class MD1 extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("MENU PRINCIPAL");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -190,7 +195,8 @@ public class MD1 extends javax.swing.JFrame {
                                     .addComponent(jLabelValorWq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jTextFieldValorWq)))
                             .addComponent(jLabelValorW, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldValorW, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldValorW, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -235,7 +241,9 @@ public class MD1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldValorW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel6))
-                .addGap(0, 225, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 147, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -261,34 +269,38 @@ public class MD1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldValorWqActionPerformed
 
     private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
-       
-       double delta = Double.parseDouble(jTextFieldDelta.getText());
-       double mu = Double.parseDouble(jTextFieldMu.getText());
-       double p = Double.parseDouble(jTextFieldP.getText());
-       ////
-       double resultadolq = ((p*p)/(2*(1-p)));
-       String valorlq = formato.format(resultadolq);
-       jTextFieldValorLq.setText(valorlq);
-       ///
-       double resultadol= resultadolq+p;
-       String valorl = formato.format(resultadol);
-       jTextFieldValorL.setText(valorl);
-       ////
-       double resultadowq= ((resultadolq/delta)*(60));
-       String valorwq = formato.format(resultadowq);
-       jTextFieldValorWq.setText(valorwq);
-       ///
-       double resultadow= ((resultadol/delta)*(60));
-       String valorw = formato.format(resultadow);
-       jTextFieldValorW.setText(valorw);
-       
-       
-       
+
+        double delta = Double.parseDouble(jTextFieldDelta.getText());
+        double mu = Double.parseDouble(jTextFieldMu.getText());
+        double p = Double.parseDouble(jTextFieldP.getText());
+        ////
+        double resultadolq = ((p * p) / (2 * (1 - p)));
+        String valorlq = formato.format(resultadolq);
+        jTextFieldValorLq.setText(valorlq);
+        ///
+        double resultadol = resultadolq + p;
+        String valorl = formato.format(resultadol);
+        jTextFieldValorL.setText(valorl);
+        ////
+        double resultadowq = ((resultadolq / delta) * (60));
+        String valorwq = formato.format(resultadowq);
+        jTextFieldValorWq.setText(valorwq);
+        ///
+        double resultadow = ((resultadol / delta) * (60));
+        String valorw = formato.format(resultadow);
+        jTextFieldValorW.setText(valorw);
+
+
     }//GEN-LAST:event_jButtonCalcularActionPerformed
 
     private void jTextFieldValorLqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldValorLqActionPerformed
-       
+
     }//GEN-LAST:event_jTextFieldValorLqActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        IndexModelos r = new IndexModelos();
+        r.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -326,6 +338,7 @@ public class MD1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCalcular;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
